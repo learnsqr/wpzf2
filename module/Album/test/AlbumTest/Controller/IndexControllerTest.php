@@ -56,19 +56,36 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
     	$this->assertEquals(200, $response->getStatusCode());
     }
     
-    public function testEditActionCanBeAccessed()
+	public function testEditActionCanBeAccessed()
+	{
+	    $this->routeMatch->setParam('action', 'edit');
+	    $this->routeMatch->setParam('id', '1');//Add this Row
+	
+	    $result   = $this->controller->dispatch($this->request);
+	    $response = $this->controller->getResponse();
+	
+	    $this->assertEquals(200, $response->getStatusCode());
+	}
+    
+    public function testEditActionRedirect()
     {
     	$this->routeMatch->setParam('action', 'edit');
     
     	$result   = $this->controller->dispatch($this->request);
     	$response = $this->controller->getResponse();
     
-    	$this->assertEquals(200, $response->getStatusCode());
+    	$this->assertEquals(302, $response->getStatusCode());
+    }
+    
+    public function testGetAlbumTableReturnsAnInstanceOfAlbumTable()
+    {
+    	$this->assertInstanceOf('Album\Model\AlbumTable', $this->controller->getAlbumTable());
     }
     
     public function testDeleteActionCanBeAccessed()
     {
-    	$this->routeMatch->setParam('action', ' delete');
+    	$this->routeMatch->setParam('action', 'delete');
+    	$this->routeMatch->setParam('id', '1');
     
     	$result   = $this->controller->dispatch($this->request);
     	$response = $this->controller->getResponse();
@@ -76,8 +93,13 @@ class IndexControllerTest extends \PHPUnit_Framework_TestCase
     	$this->assertEquals(200, $response->getStatusCode());
     }
     
-    public function testGetAlbumTableReturnsAnInstanceOfAlbumTable()
+    public function testDeleteActionRedirect()
     {
-    	$this->assertInstanceOf('Album\Model\AlbumTable', $this->controller->getAlbumTable());
+    	$this->routeMatch->setParam('action', 'delete');
+    
+    	$result   = $this->controller->dispatch($this->request);
+    	$response = $this->controller->getResponse();
+    
+    	$this->assertEquals(302, $response->getStatusCode());
     }
 }
