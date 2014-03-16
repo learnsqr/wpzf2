@@ -1,0 +1,26 @@
+ <?php
+ // module/Contracts/view/contracts/contracts/edit.phtml:
+
+ $title = 'Edit contract';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+
+ <?php
+ $form = $this->form;
+ $form->setAttribute('action', $this->url(
+     'contracts',
+     array(
+         'action' => 'edit',
+         'id'     => $this->id,
+     )
+ ));
+ $form->prepare();
+
+ echo $this->form()->openTag($form);
+ echo $this->formHidden($form->get('idcontract'));
+ echo $this->formRow($form->get('name'));
+ echo $this->formRow($form->get('description'));
+ echo $this->formRow($form->get('date'));
+ echo $this->formSubmit($form->get('submit'));
+ echo $this->form()->closeTag();

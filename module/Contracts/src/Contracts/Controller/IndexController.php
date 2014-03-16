@@ -1,48 +1,48 @@
 <?php
-namespace Album\Controller;
+namespace Contracts\Controller;
 
 use Zend\Mvc\Controller\AbstractActionController;
 use Zend\View\Model\ViewModel;
-use Album\Model\Album;
-use Album\Form\AlbumForm;
+use Contracts\Model\Contracts;
+use Contracts\Form\ContractsForm;
 
 class IndexController extends AbstractActionController
 {
-	protected $albumTable;
+	protected $contractsTable;
 	
-	public function getAlbumTable()
+	public function getContractsTable()
 	{
-		if (!$this->albumTable) {
+		if (!$this->contractsTable) {
 			$sm = $this->getServiceLocator();
-			$this->albumTable = $sm->get('Album\Model\AlbumTable');
+			$this->contractsTable = $sm->get('Contracts\Model\ContractsTable');
 		}
-		return $this->albumTable;
+		return $this->contractsTable;
 	}
 	
 	public function indexAction()
     {
     	return new ViewModel(array(
-    			'albums' => $this->getAlbumTable()->fetchAll(),
+    			'contracts' => $this->getContractsTable()->fetchAll(),
     	));
     }
     
 	public function addAction()
      {
-         $form = new AlbumForm();
+         $form = new ContractsForm();
          $form->get('submit')->setValue('Add');
 
          $request = $this->getRequest();
          if ($request->isPost()) {
-             $album = new Album();
-             $form->setInputFilter($album->getInputFilter());
+             $contract = new Contracts();
+             $form->setInputFilter($contract->getInputFilter());
              $form->setData($request->getPost());
 
              if ($form->isValid()) {
-                 $album->exchangeArray($form->getData());
-                 $this->getAlbumTable()->saveAlbum($album);
+                 $contract->exchangeArray($form->getData());
+                 $this->getContractsTable()->saveContracts($contract);
 
-                 // Redirect to list of albums
-                 return $this->redirect()->toRoute('album');
+                 // Redirect to list of s
+                 return $this->redirect()->toRoute('contracts');
              }
          }
          return array('form' => $form);
@@ -50,38 +50,38 @@ class IndexController extends AbstractActionController
     
     public function editAction()
     {
-         $id = (int) $this->params()->fromRoute('id', 0);
+         $id = (int) $this->params()->fromRoute('id', 0);  //OK
          if (!$id) {
-             return $this->redirect()->toRoute('album', array(
+             return $this->redirect()->toRoute('contracts', array(
                  'action' => 'add'
              ));
          }
 
-         // Get the Album with the specified id.  An exception is thrown
+         // Get the Contract with the specified id.  An exception is thrown
          // if it cannot be found, in which case go to the index page.
          try {
-             $album = $this->getAlbumTable()->getAlbum($id);
+             $contract = $this->getContractsTable()->getContracts($id);
          }
          catch (\Exception $ex) {
-             return $this->redirect()->toRoute('album', array(
+             return $this->redirect()->toRoute('contracts', array(
                  'action' => 'index'
              ));
          }
 
-         $form  = new AlbumForm();
-         $form->bind($album);
+         $form  = new ContractsForm();
+         $form->bind($contract);
          $form->get('submit')->setAttribute('value', 'Edit');
 
          $request = $this->getRequest();
          if ($request->isPost()) {
-             $form->setInputFilter($album->getInputFilter());
+             $form->setInputFilter($contract->getInputFilter());
              $form->setData($request->getPost());
 
              if ($form->isValid()) {
-                 $this->getAlbumTable()->saveAlbum($album);
+                 $this->getContractsTable()->saveContracts($contract);
 
                  // Redirect to list of albums
-                 return $this->redirect()->toRoute('album');
+                 return $this->redirect()->toRoute('contracts');
              }
          }
 
@@ -94,25 +94,24 @@ class IndexController extends AbstractActionController
     public function deleteAction(){
          $id = (int) $this->params()->fromRoute('id', 0);
          if (!$id) {
-             return $this->redirect()->toRoute('album');
+             return $this->redirect()->toRoute('contracts');
          }
-
+         
          $request = $this->getRequest();
          if ($request->isPost()) {
              $del = $request->getPost('del', 'No');
-
-             if ($del == 'Yes') {
-                 $id = (int) $request->getPost('id');
-                 $this->getAlbumTable()->deleteAlbum($id);
+             if ($del == 'Yes') { 
+             	$id = (int) $request->getPost('id');
+                 $this->getContractsTable()->deleteContracts($id);
              }
 
              // Redirect to list of albums
-             return $this->redirect()->toRoute('album');
+             return $this->redirect()->toRoute('contracts');
          }
-
+         
          return array(
              'id'    => $id,
-             'album' => $this->getAlbumTable()->getAlbum($id)
+             'contract' => $this->getContractsTable()->getContracts($id)
          );
     }
     

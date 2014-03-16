@@ -1,0 +1,32 @@
+<?php
+ // module/Contracts/view/contracts/contracts/index.phtml:
+
+ $title = 'My contracts';
+ $this->headTitle($title);
+ ?>
+ <h1><?php echo $this->escapeHtml($title); ?></h1>
+ <p>
+     <a href="<?php echo $this->url('contracts', array('controller'=>'index','action'=>'add'));?>">Add new contract</a>
+ </p>
+
+ <table class="table">
+ <tr>
+     <th>Name</th>
+     <th>Description</th>
+     <th>Date</th>
+     <th>&nbsp;</th>
+ </tr>
+ <?php foreach ($contracts as $contract) : ?>
+ <tr>
+     <td><?php echo $this->escapeHtml($contract->name);?></td>
+     <td><?php echo $this->escapeHtml($contract->description);?></td>
+     <td><?php echo $this->escapeHtml($contract->date);?></td>
+     <td>
+         <a href="<?php echo $this->url('contracts',
+             array('action'=>'edit', 'id' => $contract->idcontract));?>">Edit</a>
+         <a href="<?php echo $this->url('contracts',
+             array('action'=>'delete', 'id' => $contract->idcontract));?>">Delete</a>
+     </td>
+ </tr>
+ <?php endforeach; ?>
+ </table>

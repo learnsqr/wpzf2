@@ -9,7 +9,7 @@ return array(
     'modules' => array(
         'Application',
         'Simplemodule',
-        'Album','Checklist'
+        'Album','Checklist','Contracts'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
