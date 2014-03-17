@@ -46,11 +46,6 @@ return array(
             ),
         ),
     ),
-	'service_manager' => array(
-			'factories' => array(
-					'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory', // <-- add this
-			),
-	),
 		
 	'navigation' => array(
 			'default' => include('menu.config.php')
