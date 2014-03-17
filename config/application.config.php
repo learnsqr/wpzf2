@@ -9,7 +9,14 @@ return array(
     'modules' => array(
         'Application',
         'Simplemodule',
-        'Album','Checklist','Contracts'
+        'Album',
+    	'Checklist',
+		'Project',
+    	'Contracts',
+    	'ZendDeveloperTools',
+    		'ScnSocialAuth',
+    		'ZfcBase',
+    		'ZfcUser'
     ),
     'module_listener_options' => array(
         'module_paths' => array(

@@ -1,6 +1,7 @@
 <?php
 return array(
     'modules' => array(
+        'Contracts',
         'Album',
     ),
     'module_listener_options' => array(

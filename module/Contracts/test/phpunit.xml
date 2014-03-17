@@ -2,8 +2,13 @@
 
 <phpunit bootstrap="Bootstrap.php">
     <testsuites>
+<<<<<<< HEAD
+        <testsuite name="contractsModule">
+            <directory>./ContractsTest</directory>
+=======
         <testsuite name="albumModule">
             <directory>./AlbumTest</directory>
+>>>>>>> d884c02b9c1e1b6e2b196c816b2f91079013ed0a
         </testsuite>
     </testsuites>
 </phpunit>

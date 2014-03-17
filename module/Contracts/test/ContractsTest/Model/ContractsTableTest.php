@@ -30,16 +30,16 @@ class ContractsTableTest extends PHPUnit_Framework_TestCase
     			'name'        => 'The Military Wives',
     			'description' => 'In My Dreams',
                         'date'        => '00/00/0000'));
-    
+
     	$resultSet = new ResultSet();
     	$resultSet->setArrayObjectPrototype(new Contracts());
     	$resultSet->initialize(array($contract));
     
     	$mockTableGateway = $this->getMock('Zend\Db\TableGateway\TableGateway', array('select'), array(), '', false);
-    	$mockTableGateway->expects($this->once())
-    	->method('select')
-    	->with(array('id' => 123))
-    	->will($this->returnValue($resultSet));
+    	$mockTableGateway   ->expects($this->once())
+                            ->method('select')
+                            ->with(array('idcontract' => 123))
+                            ->will($this->returnValue($resultSet));
     
     	$contractTable = new ContractsTable($mockTableGateway);
     
@@ -74,26 +74,29 @@ class ContractsTableTest extends PHPUnit_Framework_TestCase
     
     public function testSaveContractWillUpdateExistingContractsIfTheyAlreadyHaveAnId()
     {
-    	$contractData = array('id' => 123, 'artist' => 'The Military Wives', 'title' => 'In My Dreams');
-    	$contract     = new Contrats();
-    	$contract>exchangeArray($contractData);
-    
+
+    	$contractData = array('idcontract' => 123, 'name' => 'Contract 1', 'description' => 'Contract 1 Description', 'date' => '00/00/0000');
+    	$contract     = new Contracts();
+    	$contract->exchangeArray($contractData);
+
     	$resultSet = new ResultSet();
     	$resultSet->setArrayObjectPrototype(new Contracts());
     	$resultSet->initialize(array($contract));
     
     	$mockTableGateway = $this->getMock('Zend\Db\TableGateway\TableGateway',
     			array('select', 'update'), array(), '', false);
-    	$mockTableGateway->expects($this->once())
-    	->method('select')
-    	->with(array('id' => 123))
-    	->will($this->returnValue($resultSet));
-    	$mockTableGateway->expects($this->once())
-    	->method('update')
-    	->with(array('artist' => 'The Military Wives', 'title' => 'In My Dreams'),
-    			array('id' => 123));
+    	$mockTableGateway   ->expects($this->once())
+                            ->method('select')
+                            ->with(array('idcontract' => 123))
+                            ->will($this->returnValue($resultSet));
+    	$mockTableGateway   ->expects($this->once())
+                            ->method('update')
+                            ->with(array('name'        => 'Contract 1',    
+                                         'description' => 'Contract 1 Description', 
+                                         'date'        => '00/00/0000'),
+                                   array('idcontract'  => 123));
     
-    	$contractTable = new $ContractsTable($mockTableGateway);
+    	$contractTable = new ContractsTable($mockTableGateway);
     	$contractTable->saveContracts($contract);
     }
     

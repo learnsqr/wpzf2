@@ -4,13 +4,14 @@ namespace ContractsTest\Controller;
 
 use ContractsTest\Bootstrap;
 use Zend\Mvc\Router\Http\TreeRouteStack as HttpRouter;
+use Contracts\Controller\IndexController;
 use Contracts\Controller\ContractsController;
 use Zend\Http\Request;
 use Zend\Http\Response;
 use Zend\Mvc\MvcEvent;
 use Zend\Mvc\Router\RouteMatch;
 use PHPUnit_Framework_TestCase;
-
+use ContractsTest\Model\ContractsTest;
 
 class ContractsControllerTest extends \PHPUnit_Framework_TestCase
 {
@@ -37,8 +38,8 @@ class ContractsControllerTest extends \PHPUnit_Framework_TestCase
         $this->controller->setServiceLocator($serviceManager);
     }
 
-public function testIndexActionCanBeAccessed()
-	{
+public function testIndexActionCanBeAccessed(){
+
 	    $this->routeMatch->setParam('action', 'index');
 	
 	    $result   = $this->controller->dispatch($this->request);
@@ -46,6 +47,7 @@ public function testIndexActionCanBeAccessed()
 	
 	    $this->assertEquals(200, $response->getStatusCode());
 	}
+
 	public function testAddActionCanBeAccessed()
 	{
 		$this->routeMatch->setParam('action', 'add');

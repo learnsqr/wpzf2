@@ -1,5 +1,5 @@
 <?php
-namespace AlbumTest;//Change this namespace for your test
+namespace ContractsTest;//Change this namespace for your test
 
 use Zend\Loader\AutoloaderFactory;
 use Zend\Mvc\Service\ServiceManagerConfig;
