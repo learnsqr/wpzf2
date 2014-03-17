@@ -13,6 +13,7 @@
         "zendframework/zendframework": "2.3.*",
         "zendframework/zftool": "dev-master",
         "zf-commons/zfc-user": "dev-master",
-        "socalnick/scn-social-auth": "dev-master"
+        "socalnick/scn-social-auth": "dev-master",
+        "phpunit/phpunit": "4.0.*"
     }
 }
