@@ -18,14 +18,18 @@ return array(
 									),
 							),
 					),
+					
 			),
+			
 	),
    
-    'controllers' => array(
-        'invokables' => array(
-            'Album\Controller\Index' => 'Album\Controller\IndexController'
-        ),
-    ),
+    
+	'controllers' => array(
+			'invokables' => array(
+					'Album\Controller\Index' 		=> 'Album\Controller\IndexController',
+					
+			),
+	),
     'view_manager' => array(
         'template_map' => array(
         	//'layout/layout'           => __DIR__ . '/../view/layout/backend.phtml',
@@ -42,4 +46,14 @@ return array(
             ),
         ),
     ),
+	'service_manager' => array(
+			'factories' => array(
+					'navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory', // <-- add this
+			),
+	),
+		
+	'navigation' => array(
+			'default' => include('menu.config.php')
+	),
 );
+
