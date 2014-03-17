@@ -11,9 +11,5 @@
  * credentials from accidentally being committed into version control.
  */
 
- return array(
-     'db' => array(
-         'username' => 'root',
-         'password' => 'asdf_1234',
-     ),
- );
+return array(
+);

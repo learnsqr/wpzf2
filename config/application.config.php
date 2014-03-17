@@ -10,7 +10,8 @@ return array(
         'Application',
         'Simplemodule',
         'Album',
-    	'Checklist'
+    	'Checklist',
+		'Project'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
