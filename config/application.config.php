@@ -16,7 +16,8 @@ return array(
     	'ZendDeveloperTools',
     		'ScnSocialAuth',
     		'ZfcBase',
-    		'ZfcUser'
+    		'ZfcUser',
+    		'Cheatsheeter'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
