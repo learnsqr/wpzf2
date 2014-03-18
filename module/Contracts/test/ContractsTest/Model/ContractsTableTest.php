@@ -26,11 +26,19 @@ class ContractsTableTest extends PHPUnit_Framework_TestCase
     public function testCanRetrieveAContractByItsId()
     {
     	$contract = new Contracts();
+<<<<<<< HEAD
     	$contract->exchangeArray(array( 'idcontract'  => 123,
 						    			'name'        => 'The Military Wives',
 						    			'description' => 'In My Dreams',
 						                'date'        => '00/00/0000'));
 						    
+=======
+    	$contract->exchangeArray(array('idcontract'     => 123,
+    			'name'        => 'The Military Wives',
+    			'description' => 'In My Dreams',
+                        'date'        => '00/00/0000'));
+    
+>>>>>>> d884c02b9c1e1b6e2b196c816b2f91079013ed0a
     	$resultSet = new ResultSet();
     	$resultSet->setArrayObjectPrototype(new Contracts());
     	$resultSet->initialize(array($contract));
@@ -38,7 +46,11 @@ class ContractsTableTest extends PHPUnit_Framework_TestCase
     	$mockTableGateway = $this->getMock('Zend\Db\TableGateway\TableGateway', array('select'), array(), '', false);
     	$mockTableGateway->expects($this->once())
     	->method('select')
+<<<<<<< HEAD
     	->with(array('idcontract' => 123))
+=======
+    	->with(array('id' => 123))
+>>>>>>> d884c02b9c1e1b6e2b196c816b2f91079013ed0a
     	->will($this->returnValue($resultSet));
     
     	$contractTable = new ContractsTable($mockTableGateway);
@@ -74,9 +86,15 @@ class ContractsTableTest extends PHPUnit_Framework_TestCase
     
     public function testSaveContractWillUpdateExistingContractsIfTheyAlreadyHaveAnId()
     {
+<<<<<<< HEAD
     	$contractData = array('idcontract' => 123, 'name' => 'Contract 1', 'description' => 'Contract 1 Description', 'date' => '00/00/0000');
     	$contract     = new Contracts();
     	$contract->exchangeArray($contractData);
+=======
+    	$contractData = array('id' => 123, 'artist' => 'The Military Wives', 'title' => 'In My Dreams');
+    	$contract     = new Contrats();
+    	$contract>exchangeArray($contractData);
+>>>>>>> d884c02b9c1e1b6e2b196c816b2f91079013ed0a
     
     	$resultSet = new ResultSet();
     	$resultSet->setArrayObjectPrototype(new Contracts());
@@ -86,6 +104,7 @@ class ContractsTableTest extends PHPUnit_Framework_TestCase
     			array('select', 'update'), array(), '', false);
     	$mockTableGateway->expects($this->once())
     	->method('select')
+<<<<<<< HEAD
     	->with(array('idcontract' => 123))
     	->will($this->returnValue($resultSet));
     	$mockTableGateway->expects($this->once())
@@ -94,6 +113,16 @@ class ContractsTableTest extends PHPUnit_Framework_TestCase
     			array('idcontract' => 123));
     
     	$contractTable = new ContractsTable($mockTableGateway);
+=======
+    	->with(array('id' => 123))
+    	->will($this->returnValue($resultSet));
+    	$mockTableGateway->expects($this->once())
+    	->method('update')
+    	->with(array('artist' => 'The Military Wives', 'title' => 'In My Dreams'),
+    			array('id' => 123));
+    
+    	$contractTable = new $ContractsTable($mockTableGateway);
+>>>>>>> d884c02b9c1e1b6e2b196c816b2f91079013ed0a
     	$contractTable->saveContracts($contract);
     }
     
