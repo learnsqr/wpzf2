@@ -12,8 +12,4 @@
  */
 
  return array(
-     'db' => array(
-         'username' => 'root',
-         'password' => 'asdf_1234',
-     ),
  );
