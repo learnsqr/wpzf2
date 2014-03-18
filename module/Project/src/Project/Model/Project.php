@@ -95,4 +95,4 @@ namespace Project\Model;
 
          return $this->inputFilter;
      }
- }
+     }

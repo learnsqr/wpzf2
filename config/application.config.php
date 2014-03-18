@@ -11,12 +11,12 @@ return array(
         'Simplemodule',
         'Album',
     	'Checklist',
-		'Project',
+        'Project',
     	'Contracts',
     	'ZendDeveloperTools',
-    		'ScnSocialAuth',
-    		'ZfcBase',
-    		'ZfcUser'
+        'ScnSocialAuth',
+        'ZfcBase',
+        'ZfcUser'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
