@@ -3,8 +3,69 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
-    "hash": "400de3aa1a104ae991659b914ae2e495",
+    "hash": "9ea369c7ca205c0eb204ceaf84e16bfd",
     "packages": [
+        {
+            "name": "zendframework/zend-developer-tools",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/zendframework/ZendDeveloperTools.git",
+                "reference": "3e4fb960030a055ac27a7e214ec2586f7d54ad3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/ZendDeveloperTools/zipball/3e4fb960030a055ac27a7e214ec2586f7d54ad3d",
+                "reference": "3e4fb960030a055ac27a7e214ec2586f7d54ad3d",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3",
+                "zendframework/zend-debug": "2.*",
+                "zendframework/zend-eventmanager": "2.*",
+                "zendframework/zend-mvc": "2.*",
+                "zendframework/zend-servicemanager": "2.*",
+                "zendframework/zend-stdlib": "2.*",
+                "zendframework/zend-version": "2.*"
+            },
+            "suggest": {
+                "bjyoungblood/bjy-profiler": "Version: dev-master, allows the usage of the (Zend) Db collector.",
+                "ocramius/ocra-service-manager": "OcraServiceManager can help you track dependencies within your application."
+            },
+            "type": "zf-module",
+            "autoload": {
+                "psr-0": {
+                    "ZendDeveloperTools": "src/"
+                },
+                "classmap": [
+                    "./Module.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Evan Coury",
+                    "email": "me@evancoury.com",
+                    "homepage": "http://blog.evan.pro/"
+                },
+                {
+                    "name": "Eric Boh",
+                    "email": "cossish@gmail.com"
+                }
+            ],
+            "description": "Module for developer and debug tools for working with the ZF2 MVC layer.",
+            "homepage": "https://github.com/zendframework/ZendDeveloperTools",
+            "keywords": [
+                "debug",
+                "developer",
+                "module",
+                "zf2"
+            ],
+            "time": "2014-03-12 00:47:04"
+        },
         {
             "name": "zendframework/zendframework",
             "version": "2.3.0",
@@ -174,12 +235,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/ZFTool.git",
-                "reference": "d73bf6f0ae6ce9b92acc72ecc8f336e2352f3ae0"
+                "reference": "a8272c70d05e472dca0c56d2ffd3af3e87715350"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/zendframework/ZFTool/zipball/d73bf6f0ae6ce9b92acc72ecc8f336e2352f3ae0",
-                "reference": "d73bf6f0ae6ce9b92acc72ecc8f336e2352f3ae0",
+                "url": "https://api.github.com/repos/zendframework/ZFTool/zipball/a8272c70d05e472dca0c56d2ffd3af3e87715350",
+                "reference": "a8272c70d05e472dca0c56d2ffd3af3e87715350",
                 "shasum": ""
             },
             "require": {
@@ -218,7 +279,7 @@
                 "tool",
                 "zf2"
             ],
-            "time": "2014-01-02 17:29:50"
+            "time": "2014-03-14 10:30:46"
         }
     ],
     "packages-dev": [
@@ -229,7 +290,8 @@
     ],
     "minimum-stability": "stable",
     "stability-flags": {
-        "zendframework/zftool": 20
+        "zendframework/zftool": 20,
+        "zendframework/zend-developer-tools": 20
     },
     "platform": {
         "php": ">=5.3.3"
