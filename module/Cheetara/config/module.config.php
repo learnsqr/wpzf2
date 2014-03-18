@@ -2,41 +2,23 @@
 return array(
     'controllers' => array(
         'invokables' => array(
-            'Cheetara\Controller\Index' => 'Cheetara\Controller\IndexController',
+            'Cheetara\Controller\Cheetara' => 'Cheetara\Controller\IndexController',
         ),
     ),
     'router' => array(
         'routes' => array(
-            'cheetara' => array(
-                'type'    => 'Literal',
+            'task' => array(
+                'type'    => 'Segment',
                 'options' => array(
-                    // Change this to something specific to your module
-                    'route'    => '/index',
+                    'route'    => '/cheetara[/:action[/:id]]',
                     'defaults' => array(
-                        // Change this value to reflect the namespace in which
-                        // the controllers for your module are found
                         '__NAMESPACE__' => 'Cheetara\Controller',
-                        'controller'    => 'Index',
+                        'controller'    => 'Cheetara',
                         'action'        => 'index',
                     ),
-                ),
-                'may_terminate' => true,
-                'child_routes' => array(
-                    // This route is a sane default when developing a module;
-                    // as you solidify the routes for your module, however,
-                    // you may want to remove it and replace it with more
-                    // specific routes.
-                    'default' => array(
-                        'type'    => 'Segment',
-                        'options' => array(
-                            'route'    => '/[:controller[/:action]]',
-                            'constraints' => array(
-                                'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-                                'action'     => '[a-zA-Z][a-zA-Z0-9_-]*',
-                            ),
-                            'defaults' => array(
-                            ),
-                        ),
+                    'constraints' => array(
+                        'action' => 'add|edit|delete|search',
+                        'id'     => '[0-9]+',
                     ),
                 ),
             ),

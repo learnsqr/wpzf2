@@ -11,7 +11,8 @@ return array(
         'Simplemodule',
         'Album',
     	'Checklist',
-		'Project'
+		'Project',
+        'Cheetara'
     ),
     'module_listener_options' => array(
         'module_paths' => array(
