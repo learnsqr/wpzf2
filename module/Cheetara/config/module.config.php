@@ -10,14 +10,15 @@ return array(
             'task' => array(
                 'type'    => 'Segment',
                 'options' => array(
-                    'route'    => '/cheetara[/:action[/:id]]',
+                    'route'    => '/cheetara[/:controller[/:action[/:id]]]',
                     'defaults' => array(
                         '__NAMESPACE__' => 'Cheetara\Controller',
                         'controller'    => 'Cheetara',
                         'action'        => 'index',
                     ),
                     'constraints' => array(
-                        'action' => 'add|edit|delete|search',
+                        'controller' => 'category|subcategory|tag|cheat|search',
+                        'action' => 'add|edit|delete',
                         'id'     => '[0-9]+',
                     ),
                 ),
