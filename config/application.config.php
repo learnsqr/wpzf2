@@ -19,7 +19,6 @@ if ($env == 'development')
 			'ZendDeveloperTools',
 			'Album',
 			'Simplemodule',
-			'Debug',
 			'Checklist',
 			'Cheetara',
 	);
