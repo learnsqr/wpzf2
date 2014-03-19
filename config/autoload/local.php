@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 /**
  * Local Configuration Override
@@ -13,9 +12,4 @@
  */
 
  return array(
-     'db' => array(
-         'username' => 'php',
-         'password' => '1234',
-     ),
  );
-

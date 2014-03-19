@@ -37,23 +37,17 @@ return array(
 								'hostname'  => 'localhost',
 						),
 						
-						'dbSlaveAdapter' => function ($sm) {
-							$adapter = new BjyProfiler\Db\Adapter\ProfilingAdapter(array(
-									'driver'         => 'Pdo',
-									'driver_options'  => array(
-											PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
-									),
-									'dsn'       => 'mysql:dbname=wpzf2;host=localhost',
-									'database'  => 'wpzf2',
-									'username'  => 'php',
-									'password'  => '1234',
-									'hostname'  => 'localhost',
-							));
-						
-							$adapter->setProfiler(new BjyProfiler\Db\Profiler\Profiler);
-							$adapter->injectProfilingStatementPrototype();
-							return $adapter;
-						},
+						'dbSlaveAdapter' => array(
+								'driver'         => 'Pdo',
+								'driver_options'  => array(
+										PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES \'UTF8\''
+								),
+								'dsn'       => 'mysql:dbname=wpzf2;host=localhost',
+								'database'  => 'wpzf2',
+								'username'  => 'php',
+								'password'  => '1234',
+								'hostname'  => 'localhost',
+						),						
 				),
 		),
 );

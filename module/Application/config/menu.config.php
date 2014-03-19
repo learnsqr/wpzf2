@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?php
 return array(
     array(
@@ -11,5 +10,3 @@ return array(
 			'route' => 'task',
 	),
 );
-
-$form = $this->zfcUserLoginWidget(array('render' => false)); ?>
