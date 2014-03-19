@@ -21,8 +21,8 @@ return array(
 					'albumrest' => array(
 							'type'    => 'segment',
 							'options' => array(
-									'route'    => '/album-rest[/:id]', // Aquí non necesitamos accion
-									'constraints' => array(											
+									'route'    => '/album-rest[/:id]',
+									'constraints' => array(
 											'id'     => '[0-9]+',
 									),
 									'defaults' => array(
@@ -52,8 +52,8 @@ return array(
             __DIR__ . '/../view',
         ),
     	'strategies' => array(
-        	'ViewJsonStrategy'
-        ),
+    			'ViewJsonStrategy',
+    	),
     ),
     // Placeholder for console routes
     'console' => array(
