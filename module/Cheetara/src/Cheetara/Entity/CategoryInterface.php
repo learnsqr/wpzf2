@@ -1,4 +1,6 @@
 <?php
+//Entity CategoryInterface
+
 
 namespace Cheetara\Entity;
 

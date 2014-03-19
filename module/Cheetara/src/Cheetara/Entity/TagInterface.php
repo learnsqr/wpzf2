@@ -1,5 +1,5 @@
 <?php
-
+//Entity TagInterface
 namespace Cheetara\Entity;
 
 interface TagInterface

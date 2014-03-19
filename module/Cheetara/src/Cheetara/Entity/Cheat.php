@@ -1,4 +1,5 @@
 <?php
+//Entity Cheat
 
 namespace Cheetara\Entity;
 

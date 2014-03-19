@@ -1,5 +1,5 @@
 <?php
-
+//Entity CheatInterface
 namespace Cheetara\Entity;
 
 interface CheatInterface
