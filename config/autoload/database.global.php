@@ -10,15 +10,11 @@
  */
 return array(
 		'service_manager' => array(
-				// for primary db adapter that called
-				// by $sm->get('Zend\Db\Adapter\Adapter')
-				'factories' => array(
-						'Zend\Db\Adapter\Adapter'=> 'Zend\Db\Adapter\AdapterServiceFactory',						
-				),
-				// to allow other adapter to be called by
-				// $sm->get('db1') or $sm->get('db2') based on the adapters config.
-				'abstract_factories' => array(
-						'Zend\Db\Adapter\AdapterAbstractServiceFactory',
-				),
+			'factories' => array(
+					'Zend\Db\Adapter\Adapter'=> 'Zend\Db\Adapter\AdapterServiceFactory',						
+			),				
+			'abstract_factories' => array(
+					'Zend\Db\Adapter\AdapterAbstractServiceFactory',
+			),
 		),
 );
