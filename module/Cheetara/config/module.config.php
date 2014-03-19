@@ -8,7 +8,6 @@ return array(
         		'Cheetara\Controller\Tag' => 'Cheetara\Controller\TagController'
         ),
     ),
-
     'router' => array(
         'routes' => array(
             'task' => array(
@@ -29,7 +28,6 @@ return array(
             ),
         ),
     ),
-
     'view_manager' => array(
         'template_path_stack' => array(
             'Cheetara' => __DIR__ . '/../view',
