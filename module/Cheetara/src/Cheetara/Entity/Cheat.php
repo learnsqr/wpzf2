@@ -166,4 +166,12 @@ class Cheat implements CheatInterface
         $this->parent = $parent;
         return $this;
     }
+	/* (non-PHPdoc)
+	 * @see \Cheetara\Entity\CheatInterface::setParent()
+	 */
+	public function setParent($parent) {
+		// TODO Auto-generated method stub
+		
+	}
+
 }

@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <projectDescription>
+<<<<<<< HEAD
+	<name>wpzf2</name>
+=======
 	<name>WPZF2</name>
+>>>>>>> a4db3435a51a4eb397b4adb6171dc616d702b3fa
 	<comment></comment>
 	<projects>
 	</projects>

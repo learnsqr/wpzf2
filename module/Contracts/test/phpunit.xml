@@ -1,30 +1,8 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
-
 <phpunit bootstrap="Bootstrap.php">
     <testsuites>
-<<<<<<< HEAD
         <testsuite name="contractsModule">
             <directory>./ContractsTest</directory>
-=======
-        <testsuite name="albumModule">
-            <directory>./AlbumTest</directory>
->>>>>>> d884c02b9c1e1b6e2b196c816b2f91079013ed0a
         </testsuite>
     </testsuites>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-
-<phpunit bootstrap="Bootstrap.php">
-    <testsuites>
-<<<<<<< HEAD
-        <testsuite name="contractsModule">
-            <directory>./ContractsTest</directory>
-=======
-        <testsuite name="albumModule">
-            <directory>./AlbumTest</directory>
->>>>>>> d884c02b9c1e1b6e2b196c816b2f91079013ed0a
-        </testsuite>
-    </testsuites>
->>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
 </phpunit>
