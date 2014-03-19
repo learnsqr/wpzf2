@@ -1,6 +1,15 @@
+<<<<<<< HEAD
+INSTALL.txt
+LICENSE.txt
+README.txt
+demos/
+extras/documentation
+/nbproject/private/
+=======
 INSTALL.txt
 LICENSE.txt
 README.txt
 demos/
 extras/documentation
 *.local.php
+>>>>>>> b43744f8c0590ff8a15611d753baf6cd1b1ad74e
