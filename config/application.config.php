@@ -5,24 +5,23 @@
  *
  * @see https://github.com/zendframework/ZFTool
  */
-($env = getenv('APPLICATION_ENV')) ?:($env= 'production');
-
-$modpro = array(
-		// General
-		'Application',
-		'Project',
-);
 if ($env == 'development')
 {
 	// Modules Debug
 	$moddev =array(
-			'ZendDeveloperTools',
-			'Album',
-			'Simplemodule',
-			'Checklist',
-			'Cheetara',
-	);
-}
+            'Application',
+            'Simplemodule',
+            'Album',
+            'Checklist',
+            'Project',
+            'Contracts',
+            'ZendDeveloperTools',
+            'ScnSocialAuth',
+            'ZfcBase',
+            'ZfcUser',
+            'Cheetara'
+        );
+        }
 else
 	$moddev=array();
 $modules=array_merge($modpro,$moddev);

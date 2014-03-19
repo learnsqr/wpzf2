@@ -53,4 +53,4 @@ class ProjectTable
 	{
 		$this->tableGateway->delete(array('idproject' => (int) $idproject));
 	}
-}
+   }

@@ -44,4 +44,4 @@ class ProjectForm extends Form
 				),
 		));
 	}
-}
+	}
