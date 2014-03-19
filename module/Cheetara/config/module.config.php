@@ -7,7 +7,7 @@ return array(
     ),
     'router' => array(
         'routes' => array(
-            'task' => array(
+            'cheetara' => array(
                 'type'    => 'Segment',
                 'options' => array(
                     'route'    => '/cheetara[/:controller[/:action[/:id]]]',
