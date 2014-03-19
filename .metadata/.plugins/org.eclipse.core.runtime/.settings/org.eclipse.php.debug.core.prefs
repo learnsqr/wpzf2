@@ -1,0 +1,3 @@
+eclipse.preferences.version=1
+org.eclipse.php.debug.core.pathMapper=<pathMappers><item1><mapper><item1><remote>C\:\\Program Files (x86)\\Zend\\ZendServer\\share\\ZendFramework\\library</remote><local>C\:\\www\\wpzf2\\.metadata\\.plugins\\org.zend.php.framework.resource\\resources\\ZendFramework-1\\library</local><type>EXTERNAL</type></item1></mapper><server>Local Zend Server</server></item1></pathMappers>
+org.eclipse.php.debug.corezend_debug_port=10137

@@ -6,11 +6,21 @@
         "framework",
         "zf2"
     ],
+    "minimum-stability": "dev",
     "homepage": "http://framework.zend.com/",
     "require": {
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*",
         "zendframework/zftool": "dev-master",
-        "zendframework/zend-developer-tools": "dev-master"
+        "zendframework/zend-developer-tools": "dev-master",
+        "zf-commons/zfc-user": "dev-master",
+        "socalnick/scn-social-auth": "dev-master",
+        "phpunit/phpunit": "4.0.*"
+   },
+    "autoload": {
+        "psr-0": {
+            "Hybrid": "./vendor/hybridauth/hybridauth/hybridauth/"
+        },
+        "classmap": ["./vendor/hybridauth/hybridauth"]
     }
 }
