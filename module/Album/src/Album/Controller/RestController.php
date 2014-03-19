@@ -41,16 +41,38 @@ class RestController extends AbstractRestfulController
     	$data = array();
     	foreach ($albums as $album)
     		$data[] = $album;
-    
-    	
-    	
-    	$this->response->setStatusCode(408);
-    	
+
     	return new JsonModel(array(
     			'albums' => $data,
     	));
     }
 	
+    function create($data) {
+    	$album = new Album();
+    	$album->exchangeArray($data);
+    	$this->getAlbumTable()->saveAlbum($album);
+    	return new JsonModel(
+    			array("status" => "ok"));
+    }
+       
+    
+    public function update($id, $data) 
+    {
+    	$album = $this->getAlbumTable()->getAlbum($id);
+    	foreach ($data as $key => $value) {
+    		$album->$key = $value;
+    	}
+    	$this->getAlbumTable()->saveAlbum($album);
+    	return new JsonModel(
+    			array("status" => "ok"));
+    }
+    
+    public function delete($id) 
+    {
+    	$this->getAlbumTable()->deleteAlbum($id);
+    	return new JsonModel(
+    			array("status" => "ok"));
+    }
 	
     
 }
