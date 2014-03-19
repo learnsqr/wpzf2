@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="installedFeatures">
+		<item value="com.zend.php.productivity:10.6.0.v20140128-2127"/>
+		<item value="org.eclipse.datatools.common.doc.user:1.10.2.v201209181447-26-311A16321A3557"/>
+		<item value="org.eclipse.datatools.connectivity.feature:1.10.2.v201209181447-7C7h9DEt1bxqP9criVgb9XdVJxM"/>
+		<item value="org.eclipse.datatools.connectivity.oda.feature:1.10.2.v201209181447-7H7C7XCcNBHNEZEnCaQf"/>
+		<item value="org.eclipse.datatools.doc.user:1.10.2.v201209181447-47C08w95FFAK89FHEC7"/>
+		<item value="org.eclipse.datatools.enablement.mysql.feature:1.10.2.v201209181447-5478AkF7AK8X9JCREG"/>
+		<item value="org.eclipse.datatools.modelbase.feature:1.10.2.v201209181447-7707GCcNBHLDaKTEcRi"/>
+		<item value="org.eclipse.datatools.sqldevtools.ddlgen.feature:1.10.2.v201209181447-7A-7DF7RZHQUMdThK5_t"/>
+		<item value="org.eclipse.datatools.sqldevtools.feature:1.10.2.v201209181447-7N8B7WFDri4ohCyg6O43UgSwbFm0"/>
+		<item value="org.eclipse.datatools.sqldevtools.parsers.feature:1.10.2.v201209181447-623BgJ9EE9ZJRDZLA"/>
+		<item value="org.eclipse.dltk.core.index:5.0.0.201401070940"/>
+		<item value="org.eclipse.dltk.core:5.0.0.201401070940"/>
+		<item value="org.eclipse.draw2d:3.9.1.201308190730"/>
+		<item value="org.eclipse.egit:3.2.0.201312181205-r"/>
+		<item value="org.eclipse.emf.codegen.ecore.ui:2.9.1.v20130902-0605"/>
+		<item value="org.eclipse.emf.codegen.ecore:2.9.1.v20130902-0605"/>
+		<item value="org.eclipse.emf.codegen.ui:2.7.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.codegen:2.9.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.common.ui:2.8.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.common:2.9.1.v20130827-0309"/>
+		<item value="org.eclipse.emf.converter:2.9.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.databinding.edit:1.3.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.databinding:1.3.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.ecore.edit:2.8.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.ecore.editor:2.9.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.ecore:2.9.1.v20130827-0309"/>
+		<item value="org.eclipse.emf.edit.ui:2.9.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.edit:2.9.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.mapping.ecore.editor:2.8.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.mapping.ecore:2.7.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.mapping.ui:2.7.0.v20130902-0605"/>
+		<item value="org.eclipse.emf.mapping:2.7.0.v20130902-0605"/>
+		<item value="org.eclipse.emf:2.9.1.v20130902-0605"/>
+		<item value="org.eclipse.gef:3.9.1.201308190730"/>
+		<item value="org.eclipse.help:1.4.1.v20120912-145617-8R7xFOXFLWUl7PpMEeZNIGkb4"/>
+		<item value="org.eclipse.jgit:3.2.0.201401061358"/>
+		<item value="org.eclipse.platform:3.8.1.v20130118-180812-9jF7oIBFG8eU2pim-VbIlTuQjY0RWWK3x-bv4I"/>
+		<item value="org.eclipse.rcp:3.8.2.v20130118-180157-96BuGOZFxwOAeG8Ofmqicz0tPK"/>
+		<item value="org.eclipse.rse.core:3.4.100.201307171557"/>
+		<item value="org.eclipse.rse.ftp:3.2.0.201305152119"/>
+		<item value="org.eclipse.rse.ssh:3.0.500.201305201712"/>
+		<item value="org.eclipse.wst.common.fproj:3.4.0.v201202292300-377F8N8s735555393B7B"/>
+		<item value="org.eclipse.wst.jsdt.feature:1.4.1.v201208171701-7H7DFg0FC7sReqSyfqesWi"/>
+		<item value="org.eclipse.wst.web_ui.feature:3.4.2.v201211061806-7O7MFu3EMkBK01NbrfU9ATE5cdZFz-OoeYjaI4d2"/>
+		<item value="org.eclipse.wst.xml_ui.feature:3.4.2.v201211061806-7H7GFeJDxumUrsn5qkiQgOEhsz0p60HAmPyU6VX"/>
+		<item value="org.eclipse.xsd.edit:2.7.0.v20130125-0826"/>
+		<item value="org.eclipse.xsd:2.8.1.v20130125-0826"/>
+		<item value="org.zend.usagedata:1.0.1.201309181502"/>
+	</list>
+	<section name="org.eclipse.ui.dialogs.FilteredResourcesSelectionDialog">
+		<item value="true" key="ShowStatusLine"/>
+		<item value="false" key="ShowDerived"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;workingSet workingSetName=&quot;&quot;/&gt;" key="WorkingSet"/>
+		<item value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&#x0D;&#x0A;&lt;History&gt;&#x0D;&#x0A;&lt;historyRootNode/&gt;&#x0D;&#x0A;&lt;/History&gt;" key="History"/>
+		<section name="DialogBoundsSettings">
+			<item value="600" key="DIALOG_WIDTH"/>
+			<item value="51" key="DIALOG_Y_ORIGIN"/>
+			<item value="500" key="DIALOG_HEIGHT"/>
+			<item value="212" key="DIALOG_X_ORIGIN"/>
+			<item value="1|Segoe UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Segoe UI" key="DIALOG_FONT_NAME"/>
+		</section>
+	</section>
+	<section name="NewWizardAction">
+	</section>
+</section>

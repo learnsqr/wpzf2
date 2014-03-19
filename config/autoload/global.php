@@ -26,3 +26,9 @@ return array(
          ),
      ),
  );
+return array(
+	'db_lite' => array(
+			'driver'   => 'Pdo_Sqlite',
+			'database' => 'data/cheatsheet.db',
+	),
+ );

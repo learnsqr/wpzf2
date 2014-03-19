@@ -48,4 +48,4 @@ class ContractsTest extends PHPUnit_Framework_TestCase
                 $this->assertNull($contract->date, 	 '"date" should have defaulted to null');
 
 	}
-}
+	}

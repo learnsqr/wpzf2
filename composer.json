@@ -16,5 +16,11 @@
         "zf-commons/zfc-user": "dev-master",
         "socalnick/scn-social-auth": "dev-master",
         "phpunit/phpunit": "4.0.*"
+   },
+    "autoload": {
+        "psr-0": {
+            "Hybrid": "./vendor/hybridauth/hybridauth/hybridauth/"
+        },
+        "classmap": ["./vendor/hybridauth/hybridauth"]
     }
 }

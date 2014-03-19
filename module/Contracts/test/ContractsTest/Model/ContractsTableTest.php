@@ -126,4 +126,4 @@ class ContractsTableTest extends PHPUnit_Framework_TestCase
     
     	$this->fail('Expected exception was not thrown');
     }
-}
+    }

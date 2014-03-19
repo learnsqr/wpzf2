@@ -3,7 +3,11 @@
         "This file locks the dependencies of your project to a known state",
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
+<<<<<<< HEAD
     "hash": "9a791a7c0d6879e701d2b2aeee3cf15e",
+=======
+    "hash": "b040e68641ad2c1f4cf027ce36b7df03",
+>>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
     "packages": [
         {
             "name": "hybridauth/hybridauth",
@@ -55,6 +59,7 @@
             "time": "2014-03-06 12:41:08"
         },
         {
+<<<<<<< HEAD
             "name": "phpunit/php-code-coverage",
             "version": "2.0.x-dev",
             "source": {
@@ -631,6 +636,8 @@
             "time": "2014-03-07 15:35:33"
         },
         {
+=======
+>>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
             "name": "socalnick/scn-social-auth",
             "version": "dev-master",
             "source": {
@@ -684,6 +691,7 @@
             "time": "2014-03-09 00:14:03"
         },
         {
+<<<<<<< HEAD
             "name": "symfony/yaml",
             "version": "dev-master",
             "target-dir": "Symfony/Component/Yaml",
@@ -733,6 +741,8 @@
             "time": "2014-03-03 12:53:01"
         },
         {
+=======
+>>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
             "name": "zendframework/zend-developer-tools",
             "version": "dev-master",
             "source": {
@@ -799,12 +809,21 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/zendframework/zf2.git",
+<<<<<<< HEAD
                 "reference": "c98dc5f667051970220371ce5d4fbdf43e55d636"
             },
             "dist": {
                 "type": "zip",
                 "url": "https://api.github.com/repos/zendframework/zf2/zipball/c98dc5f667051970220371ce5d4fbdf43e55d636",
                 "reference": "c98dc5f667051970220371ce5d4fbdf43e55d636",
+=======
+                "reference": "cba1dc41da13ce1e6a8e24b8a2fc55c50b386481"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/zendframework/zf2/zipball/cba1dc41da13ce1e6a8e24b8a2fc55c50b386481",
+                "reference": "cba1dc41da13ce1e6a8e24b8a2fc55c50b386481",
+>>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
                 "shasum": ""
             },
             "require": {
@@ -909,7 +928,11 @@
                 "framework",
                 "zf2"
             ],
+<<<<<<< HEAD
             "time": "2014-03-17 23:54:06"
+=======
+            "time": "2014-03-14 20:28:44"
+>>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
         },
         {
             "name": "zendframework/zendxml",
@@ -1007,6 +1030,10 @@
                 "zf2"
             ],
             "time": "2014-03-14 10:30:46"
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+>>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
         },
         {
             "name": "zf-commons/zfc-base",
@@ -1129,6 +1156,11 @@
                 "zf2"
             ],
             "time": "2014-03-16 09:10:27"
+<<<<<<< HEAD
+=======
+=======
+>>>>>>> d884c02b9c1e1b6e2b196c816b2f91079013ed0a
+>>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
         }
     ],
     "packages-dev": [
@@ -1140,8 +1172,13 @@
     "minimum-stability": "dev",
     "stability-flags": {
         "zendframework/zftool": 20,
+<<<<<<< HEAD
         "zendframework/zend-developer-tools": 20,
         "zf-commons/zfc-user": 20,
+=======
+        "zf-commons/zfc-user": 20,
+        "zendframework/zend-developer-tools": 20,
+>>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
         "socalnick/scn-social-auth": 20
     },
     "platform": {

@@ -3,7 +3,7 @@ return array(
     array(
     	'label' => 'Contracts',
     	'route' => 'contracts',
-    	'order' => 3,
+    	//'order' => 3,
     	'pages' => array(
 	    	array(
 	    		'label' => 'Add',
@@ -22,5 +22,4 @@ return array(
 	    	),
     	),
 	),
-	
 );
