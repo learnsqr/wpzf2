@@ -18,6 +18,18 @@ return array(
 									),
 							),
 					),
+					'albumrest' => array(
+							'type'    => 'segment',
+							'options' => array(
+									'route'    => '/album-rest[/:id]',
+									'constraints' => array(
+											'id'     => '[0-9]+',
+									),
+									'defaults' => array(
+											'controller' => 'Album\Controller\Rest',											
+									),
+							),
+					),
 					
 			),
 			
@@ -27,6 +39,7 @@ return array(
 	'controllers' => array(
 			'invokables' => array(
 					'Album\Controller\Index' 		=> 'Album\Controller\IndexController',
+					'Album\Controller\Rest' 		=> 'Album\Controller\RestController',
 					
 			),
 	),
@@ -38,6 +51,9 @@ return array(
         'template_path_stack' => array(
             __DIR__ . '/../view',
         ),
+    	'strategies' => array(
+    			'ViewJsonStrategy',
+    	),
     ),
     // Placeholder for console routes
     'console' => array(
