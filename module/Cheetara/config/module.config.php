@@ -8,66 +8,28 @@ return array(
         		'Cheetara\Controller\Tag' => 'Cheetara\Controller\TagController'
         ),
     ),
-		
-	'router' => array(
-			'routes' => array(
-					'cheetara' => array(
-							'type'    => 'segment',
-							'options' => array(
-									'route'    => '/cheetara[/:action][/:id]',
-									'constraints' => array(
-											'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-											'id'     => '[0-9]+',
-									),
-									'defaults' => array(
-											'controller' => 'Cheetara\Index',
-											'action'     => 'index',
-									),
-							),
-							'may_terminate' => true,
-							'child_routes' => array(
-									'Category' => array(
-											'type' => 'Segment',
-											'options' => array(
-													'route' => '/[:controller[/:action]]',
-													'constraints' => array(
-															'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-															'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-													),
-													'defaults' => array(
-													),
-											),
-									),
-									'Cheat' => array(
-											'type' => 'Segment',
-											'options' => array(
-													'route' => '/[:controller[/:action]]',
-													'constraints' => array(
-															'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-															'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-													),
-													'defaults' => array(
-													),
-											),
-									),
-									'Tag' => array(
-											'type' => 'Segment',
-											'options' => array(
-													'route' => '/[:controller[/:action]]',
-													'constraints' => array(
-															'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
-															'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-													),
-													'defaults' => array(
-													),
-											),
-									),
-							),
-					),
-	
-			),
-	),
-    
+
+    'router' => array(
+        'routes' => array(
+            'task' => array(
+                'type'    => 'Segment',
+                'options' => array(
+                    'route'    => '/cheetara[/:controller[/:action[/:id]]]',
+                    'defaults' => array(
+                        '__NAMESPACE__' => 'Cheetara\Controller',
+                        'controller'    => 'Index',
+                        'action'        => 'index',
+                    ),
+                    'constraints' => array(
+                        'controller' => 'category|subcategory|tag|cheat|search',
+                        'action' => 'add|edit|delete',
+                        'id'     => '[0-9]+',
+                    ),
+                ),
+            ),
+        ),
+    ),
+
     'view_manager' => array(
         'template_path_stack' => array(
             'Cheetara' => __DIR__ . '/../view',
