@@ -1,2 +1,4 @@
 eclipse.preferences.version=1
 include_path=5;org.eclipse.dltk.USER_LIBRARY/org.eclipse.php.core.PHPNature\#PHPUnit\u00050;/wpzf2\u00055;org.eclipse.dltk.USER_LIBRARY/org.eclipse.php.core.PHPNature\#Zend Framework 2
+include_path=0;/wpzf2
+use_asp_tags_as_php=false

@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 
 <phpunit bootstrap="Bootstrap.php">
@@ -7,14 +6,4 @@
             <directory>./ProjectTest</directory>
         </testsuite>
     </testsuites>
-=======
-<?xml version="1.0" encoding="UTF-8"?>
-
-<phpunit bootstrap="Bootstrap.php">
-    <testsuites>
-        <testsuite name="projectModule">
-            <directory>./ProjectTest</directory>
-        </testsuite>
-    </testsuites>
->>>>>>> b43744f8c0590ff8a15611d753baf6cd1b1ad74e
 </phpunit>
