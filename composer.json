@@ -12,6 +12,7 @@
         "php": ">=5.3.3",
         "zendframework/zendframework": "2.3.*",
         "zendframework/zftool": "dev-master",
+<<<<<<< HEAD
         "zendframework/zend-developer-tools": "dev-master",
         "zf-commons/zfc-user": "dev-master",
         "socalnick/scn-social-auth": "dev-master",
@@ -22,5 +23,8 @@
             "Hybrid": "./vendor/hybridauth/hybridauth/hybridauth/"
         },
         "classmap": ["./vendor/hybridauth/hybridauth"]
+=======
+        "zendframework/zend-developer-tools": "dev-master"
+>>>>>>> a3713b1c091c8a18702ceae11055496e28d5268e
     }
 }

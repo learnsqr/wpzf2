@@ -4,6 +4,7 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file"
     ],
 <<<<<<< HEAD
+<<<<<<< HEAD
     "hash": "9a791a7c0d6879e701d2b2aeee3cf15e",
 =======
     "hash": "b040e68641ad2c1f4cf027ce36b7df03",
@@ -743,6 +744,11 @@
         {
 =======
 >>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
+=======
+    "hash": "9ea369c7ca205c0eb204ceaf84e16bfd",
+    "packages": [
+        {
+>>>>>>> a3713b1c091c8a18702ceae11055496e28d5268e
             "name": "zendframework/zend-developer-tools",
             "version": "dev-master",
             "source": {
@@ -1031,6 +1037,7 @@
             ],
             "time": "2014-03-14 10:30:46"
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 <<<<<<< HEAD
 >>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
@@ -1161,6 +1168,8 @@
 =======
 >>>>>>> d884c02b9c1e1b6e2b196c816b2f91079013ed0a
 >>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
+=======
+>>>>>>> a3713b1c091c8a18702ceae11055496e28d5268e
         }
     ],
     "packages-dev": [
@@ -1173,6 +1182,7 @@
     "stability-flags": {
         "zendframework/zftool": 20,
 <<<<<<< HEAD
+<<<<<<< HEAD
         "zendframework/zend-developer-tools": 20,
         "zf-commons/zfc-user": 20,
 =======
@@ -1180,6 +1190,9 @@
         "zendframework/zend-developer-tools": 20,
 >>>>>>> 0eed4766ee212098381eb8b3b088adb595fd5e21
         "socalnick/scn-social-auth": 20
+=======
+        "zendframework/zend-developer-tools": 20
+>>>>>>> a3713b1c091c8a18702ceae11055496e28d5268e
     },
     "platform": {
         "php": ">=5.3.3"
