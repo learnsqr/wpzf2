@@ -10,9 +10,9 @@
  */
 return array(
 		'service_manager' => array(
-			'factories' => array(
-					'Zend\Db\Adapter\Adapter'=> 'Zend\Db\Adapter\AdapterServiceFactory',						
-			),				
+// 			'factories' => array(
+// 					'Zend\Db\Adapter\Adapter'=> 'Zend\Db\Adapter\AdapterServiceFactory',						
+// 			),				
 			'abstract_factories' => array(
 					'Zend\Db\Adapter\AdapterAbstractServiceFactory',
 			),
