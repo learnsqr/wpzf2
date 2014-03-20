@@ -37,13 +37,58 @@
                     <a class="navbar-brand" href="<?php echo $this->url('home') ?>"><img src="<?php echo $this->basePath('img/zf2-logo.png') ?>" alt="Zend Framework 2"/>&nbsp;<?php echo $this->translate('Skeleton Application') ?></a>
                 </div>
                 <div class="collapse navbar-collapse">
+                <div class="collapse navbar-collapse">
+                	<?php 
+						echo "<ul class=\"nav navbar-nav\">";
+						$navHelper = $this->navigation('navigation');
+						$containers = $navHelper->getContainer();
+						foreach($containers->getPages() as $page) 
+						{
+							$class = "";
+							if ($page->isActive()) {
+								$class = "active";
+							}
+							if(count($page)) 
+							{
+								// if there are subpages we render the menu a bit different
+								$label = $page->getLabel();
+								$label = $this->translate($label); // translated label
+								$label = $this->escapehtml($label); // sanitized label
+								printf('<li class="dropdown%s">'."\n",
+										($class?' '.$class:'')
+								);
+								printf(' <a href="%s" class="dropdown-toggle" data-toggle="dropdown">%s<b
+											class="caret"></b></a>'."\n",
+											$page->getHref(),
+											$label
+								);
+								echo '<ul class="dropdown-menu">'."\n";
+								foreach($page as $subPage) 
+								{
+									if(!$navHelper->accept($subPage)) 
+									{
+										continue;
+									}
+									printf("<li>%s</li>\n",$navHelper->htmlify($subPage));
+								}
+								echo "</ul></li>\n";
+							}
+							else 
+							{
+								printf("<li class=\"%s\">%s</li>\n",
+								$class,$navHelper->htmlify($page));
+							}
+						}
+						echo "</ul>";
+						echo "</div>";
+					?>
                     <ul class="nav navbar-nav">
 	                    <?php 
-						 echo $this->navigation('navigation')
-						           ->menu()
-						           ->setMinDepth(0)
-						           ->setMaxDepth(0)
-						           ->setUlClass('nav navbar-nav');
+// 						 echo $this->navigation('navigation')
+// 						           ->menu()
+// 						           ->setMinDepth(0)
+// 						           ->setMaxDepth(0)
+// 						           ->setUlClass('nav navbar-nav');
 						 ?>                       
                     </ul>
                 </div><!--/.nav-collapse -->
