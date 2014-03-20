@@ -16,11 +16,13 @@ if ($env == 'development')
 {
 	// Modules Debug
 	$moddev =array(
+			'Developer',
 			'ZendDeveloperTools',
 			'Album',
 			'Simplemodule',
 			'Checklist',
 			'Cheetara',
+			'EdpMarkdown',
 	);
 }
 else
